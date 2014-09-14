@@ -38,6 +38,7 @@ a {
 .main {
 	position: relative;
 	margin-top: 160px;
+	padding-top: 48px;
 	padding-bottom: 24px;
 
 	background-color: rgb(253,253,253);
@@ -49,7 +50,6 @@ a {
 }
 
 .section {
-	padding-top: 1.3em;
 	padding-bottom: 0.8em;
 
 	font-size: 2em;
