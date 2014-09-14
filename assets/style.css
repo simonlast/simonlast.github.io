@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+
+	font-family: "skolar", sans-serif;
+	font-weight: 300;
+
+	background-color: #556270;
+	color: #556270;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.header, .main, .footer {
+	padding-left: 32px;
+}
+
+.header {
+	font-size: 3em;
+	color: rgb(253,253,253);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	padding-top: 32px;
+	padding-bottom: 48px;
+}
+
+.main {
+	position: relative;
+	margin-top: 160px;
+	padding-bottom: 24px;
+
+	background-color: rgb(253,253,253);
+	box-shadow: 0 0px 12px rgba(0,0,0,0.2);
+}
+
+.main > *{
+	max-width: 40em;
+}
+
+.section {
+	padding-top: 1.3em;
+	padding-bottom: 0.8em;
+
+	font-size: 2em;
+}
+
+.item {
+	padding-bottom: 1.2em;
+}
+
+.item.archive {
+	margin-top: 2em;
+}
+
+.item .title {
+	padding-bottom: 0.2em;
+
+	font-size: 1.4em;
+}
+
+.item .description {
+	font-size: 1.1em;
+	color: #979797;
+}
+
+.item:hover .title {
+	text-decoration: underline;
+}
+
+.footer {
+	padding-top: 48px;
+	padding-bottom: 48px;
+
+	color: rgb(253,253,253);
+}
+
+.footer a {
+	padding-bottom: 0.3em;
+
+	font-size: 1.4em;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
