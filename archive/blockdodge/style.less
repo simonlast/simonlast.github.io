@@ -1,0 +1,127 @@
+
+.rounded-corners (@radius: 15px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.ease (@time: .2s) {
+	-webkit-transition: all @time ease-in-out;
+    -moz-transition: all @time ease-in-out;
+    -o-transition: all @time ease-in-out;
+    -ms-transition: all @time ease-in-out;
+}
+
+@text: rgb(85,98,112);
+
+body{
+
+	margin: 0;
+	padding: 0;
+	background-color: rgb(250,250,250);
+	font-family: "Helvetica";
+
+}
+
+#canvasbody{
+		overflow: hidden;
+}
+
+.pCanvas{
+	margin: 0;
+	padding: 0;
+	border: 10px;
+}
+
+#scorelink{
+	position:absolute;
+	top:10px;
+	right:10px;
+	padding: 10px;
+	color:@text;
+	opacity: .7;
+	background-color:rgb(230,230,230);
+	font-size: 30px;
+	.rounded-corners(10px);
+	text-decoration:none;
+	.ease;
+	
+
+}
+
+#scorelink:hover{
+	opacity: .9;
+}
+
+
+#scorebox{
+	padding: 50px;
+	margin:0px auto;
+	width: 500px;
+}
+
+
+
+#scoreTitle{
+	padding: 50px;
+	margin:0px auto;
+	width: 500px;
+	text-align: center;
+	font-size: 80px;
+	color:@text;
+	opacity: .78;
+	.ease;
+}
+
+#scoreTitle:hover{
+	opacity: .9;
+}
+
+#extras{
+	padding: 50px;
+	margin:0px auto;
+	width: 500px;
+}
+
+#extralink{
+	padding: 10px;
+	margin: 5px;
+	color:@text;
+	opacity: .7;
+	background-color:rgb(230,230,230);
+	font-size: 30px;
+	.rounded-corners(10px);
+	text-decoration:none;
+	line-height: 220%;
+	.ease;
+}
+
+#extralink:hover{
+	opacity: .9;
+}
+
+
+table, td
+{
+	.rounded-corners(5px);
+	padding:15px;
+	width: 100%;
+	
+}
+tr
+{
+	font-size: 40px;
+	background-color:rgb(230,230,230);
+	color:@text;
+	opacity: .78;
+	.ease;
+}
+
+tr:hover{
+	opacity: .9;
+}
+
+#pic{
+	width: 50%;
+	margin: 0px auto;
+}

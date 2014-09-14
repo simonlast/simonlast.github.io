@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>High Scores</title>
+		<meta name="author" content="Simon Last" />
+		<link rel="shortcut icon" href="http://www.gravatar.com/avatar/3b964d84fcfbcdf59089c8bd7309f0b7.ico" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		 <script type="text/javascript" src="d3.v2.min.js"></script>
+		 <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34986650-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+	
+	<body>
+
+		<a id="scorelink" href="../">back to game</a>
+
+		<h1 id="scoreTitle">High Scores</h1>
+		<div id="scorebox"></div>
+		<div id="extras">
+		<a id="extralink" href="https://chrome.google.com/webstore/detail/ljgjhmdjooeciiffpfmpeolmfobohchf">install chrome app</a>
+		<a id="extralink" class="resetname" href="#">reset name</a>
+		<a id="extralink" href="http://simonlast.org/experiments">more games</a>
+		
+		</div>
+		<div id="pic"></div>
+		
+		<script type="text/javascript">
+			d3.json("scores.json", function(json) {
+
+				if(!json)
+					return;
+				
+				var str = "<table>";
+				for(var i=0; i<json.length; i++){
+					str += "<tr><td>" + json[i].name + "</td><td>" + json[i].score + "</td></tr>";
+				}
+
+				str += "</table>";
+
+    			d3.select("#scorebox").html(str);
+    			if(localStorage && localStorage.name === "lizzzy"){
+    				var str = ""
+    				for(var i=0; i<100; i++){
+    					str += "<img src=\"http://www.pantherkut.com/wp-content/uploads/2008/12/cutest-kitten-1.jpg\">";
+    				}
+    				d3.select("#pic").html(str);
+    			}
+  			});
+
+			d3.select(".resetname").on("click",function(){
+				if(localStorage){
+					var name = prompt("Current name: " + localStorage.name + ". Enter a new name:");
+					localStorage.name = name.toLowerCase();
+				}else{
+					alert("Sorry, you don't have a modern browser :(")
+				}
+				
+			});
+
+			d3
+
+		</script>
+
+		
+    
+	</body>
+</html>

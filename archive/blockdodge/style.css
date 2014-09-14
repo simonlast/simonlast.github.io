@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font-family: "Helvetica";
+}
+#canvasbody {
+  overflow: hidden;
+}
+.pCanvas {
+  margin: 0;
+  padding: 0;
+  border: 10px;
+}
+#scorelink {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  color: #556270;
+  opacity: .7;
+  background-color: #e6e6e6;
+  font-size: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+#scorelink:hover {
+  opacity: .9;
+}
+#scorebox {
+  padding: 50px;
+  margin: 0px auto;
+  width: 500px;
+}
+#scoreTitle {
+  padding: 50px;
+  margin: 0px auto;
+  width: 500px;
+  text-align: center;
+  font-size: 80px;
+  color: #556270;
+  opacity: .78;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+#scoreTitle:hover {
+  opacity: .9;
+}
+#extras {
+  padding: 50px;
+  margin: 0px auto;
+  width: 500px;
+}
+#extralink {
+  padding: 10px;
+  margin: 5px;
+  color: #556270;
+  opacity: .7;
+  background-color: #e6e6e6;
+  font-size: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  text-decoration: none;
+  line-height: 220%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+#extralink:hover {
+  opacity: .9;
+}
+table,
+td {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+}
+tr {
+  font-size: 40px;
+  background-color: #e6e6e6;
+  color: #556270;
+  opacity: .78;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+tr:hover {
+  opacity: .9;
+}
+#pic {
+  width: 50%;
+  margin: 0px auto;
+}
