@@ -20,6 +20,7 @@ a {
 
 .header, .main, .footer {
 	padding-left: 48px;
+	padding-right: 48px;
 }
 
 .header {
