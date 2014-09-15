@@ -15,14 +15,14 @@ boolean started, lost;
 void setup(){
   size(screenWidth,screenHeight);
   background(60);
-  es[0][0] = loadImage("/px/e1.png");
-  es[0][1] = loadImage("/px/e1b.png");
-  es[1][0] = loadImage("/px/e2.png");
-  es[1][1] = loadImage("/px/e2b.png");
-  es[2][0] = loadImage("/px/e3.png");
-  es[2][1] = loadImage("/px/e3b.png");
-  es[3][0] = loadImage("/px/e4.png");
-  es[3][1] = loadImage("/px/e4b.png");
+  es[0][0] = loadImage("assets/e1.png");
+  es[0][1] = loadImage("assets/e1b.png");
+  es[1][0] = loadImage("assets/e2.png");
+  es[1][1] = loadImage("assets/e2b.png");
+  es[2][0] = loadImage("assets/e3.png");
+  es[2][1] = loadImage("assets/e3b.png");
+  es[3][0] = loadImage("assets/e4.png");
+  es[3][1] = loadImage("assets/e4b.png");
   eins = new ArrayList();
   eDimen = new PVector(27,68);
   //for(int x=0; x<5; x++)
@@ -44,7 +44,7 @@ void setup(){
 void draw(){
   background(30);
   if(started){
-  
+
 
   for(int x=0; x<eins.size(); x++){
   Einstein temp = (Einstein)eins.get(x);
@@ -53,7 +53,7 @@ void draw(){
   if(!lost)
   p.render();
 
-  
+
   if(timer.isFinished()){
   eins.add(new Einstein(random(50,width-50)));
   timer = new Timer(time - points*5);
@@ -87,7 +87,7 @@ void keyPressed(){
  p.v = -1*pSpeed;
  }
  if(keyCode == RIGHT){
- p.v = pSpeed;  
+ p.v = pSpeed;
  }
   }
 }
@@ -100,7 +100,7 @@ class Einstein{
   int einsteinNum;
   PImage img;
   int imgNum;
-  
+
   Einstein(float x){
   dimen = eDimen;
   einsteinNum = (int)random(4);
@@ -115,13 +115,13 @@ class Einstein{
   dir = false;
   v = new PVector(-1*eSpeed.x,eSpeed.y);
   img = es[einsteinNum][0];
-  imgNum =0; 
+  imgNum =0;
   }
   }
-  
+
   void bounceCheck(){
   if(pos.x <= 0 || pos.x + eDimen.x >= width){
-    v.x *= -1;  
+    v.x *= -1;
   if(imgNum ==0){
   img = es[einsteinNum][1];
   imgNum = 1;
@@ -130,22 +130,22 @@ class Einstein{
   else if(imgNum ==1){
   img = es[einsteinNum][0];
   imgNum = 0;
-  }  
-  
+  }
+
   }
   if(pos.y > height){
    eins.remove(this);
-   points-= 5; 
+   points-= 5;
    if(points < 0)
    lost = true;
   }
   }
-  
+
   void render(){
     bounceCheck();
     pos.add(v);
     image(img,pos.x,pos.y);
-    
+
   }
 }
 
@@ -154,13 +154,13 @@ class Player{
   PVector dimen;
   float v;
   float decel = 1.1;
-  
+
   Player(float x){
     pos = new PVector(x,playerHeight);
     dimen = playerDimen;
     v = 0;
   }
- 
+
  void check(){
      for(int x=0; x<eins.size(); x++){
   Einstein temp = (Einstein)eins.get(x);
@@ -169,9 +169,9 @@ class Player{
   points++;
   }
      }
-   
+
  }
- 
+
  void render(){
   check();
   if(abs(v) > pSpeed/10)
@@ -180,37 +180,37 @@ class Player{
   v = 0;
   if(pos.x <= 0){
   pos.x = 0;
-  v = pSpeed/6;  
+  v = pSpeed/6;
   }
   if(pos.x + dimen.x >= width){
   pos.x = width - dimen.x;
-  v = -1*pSpeed/6;  
-    
+  v = -1*pSpeed/6;
+
   }
   pos.x += v;
   fill(255);
   rect(pos.x,pos.y,dimen.x,dimen.y);
- } 
+ }
 }
 
 class Timer {
- 
+
   int savedTime; // When Timer started
   int totalTime; // How long Timer should last
-  
+
   Timer(int tempTotalTime) {
     totalTime = tempTotalTime;
   }
-  
+
   // Starting the timer
   void start() {
     // When the timer starts it stores the current time in milliseconds.
-    savedTime = millis(); 
+    savedTime = millis();
   }
-  
-  // The function isFinished() returns true if 5,000 ms have passed. 
+
+  // The function isFinished() returns true if 5,000 ms have passed.
   // The work of the timer is farmed out to this method.
-  boolean isFinished() { 
+  boolean isFinished() {
     // Check how much time has passed
     int passedTime = millis()- savedTime;
     if (passedTime > totalTime) {
