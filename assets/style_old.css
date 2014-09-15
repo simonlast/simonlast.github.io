@@ -733,7 +733,7 @@ a:hover {
 }
 #copaintabout {
   position: absolute;
-  right: 0;
+  right: 12px;
 }
 ul#twitterAboutNav img {
   width: 80%;
