@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <title>Simon Last</title>
+    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/3b964d84fcfbcdf59089c8bd7309f0b7.ico" />
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="article.css">
+    <script src="//use.typekit.net/suk0ird.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+    <a class="header" href="/">Simon Last</a>
+
+    <div class="main">
+
+      <div class="section">PathPainter</div>
+
+      <div class="images">
+        <img src="painting1.png">
+        <img src="painting2.png">
+      </div>
+
+      <p>PathPainter is tool for creating generative art.</p>
+
+      <p>This program finds the "path of least resistance", defined by color data, through a photo in order to create an interesting paint-like effect. Using the Processing file, you can play with several parameters, including the input image, stroke lifespan, opacity, and stroke width.</p>
+
+      <div class="links">
+        <a href="painter_original.pde">Download Source</a>
+        <a href="http://www.youtube.com/watch?v=nHpl-y-FPvE">Watch Video 1</a>
+        <a href="http://www.youtube.com/watch?v=x02jhYHLxHU">Watch Video 2</a>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <a class="email" data-email="uryyb@fvzbaynfg.bet" onclick="convert(this)" onmouseover="convert(this)" href="/email">uryyb@fvzbaynfg.bet</a>
+      <a href="http://photos.simonlast.org/">Photos</a>
+      <a href="https://github.com/simonlast">GitHub</a>
+      <a href="https://twitter.com/simonlast">Twitter</a>
+    </div>
+
+    <script type="text/javascript">
+      var az = "abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+      var convert = function(el){
+        var converted = dcpt(el.getAttribute("data-email"));
+        el.href = "mailto:" + converted;
+        el.innerHTML = converted;
+      };
+
+      var dcpt = function(text) {
+        for (var r = "", i = 0; i < text.length; i++) {
+          var chr = text.charAt(i);
+          var position = az.indexOf(chr);
+          if (position > -1) {
+            chr = az.charAt(position + 13);
+          }
+          r += chr;
+        }
+        return r;
+      };
+    </script>
+
+  </body>
+</html>

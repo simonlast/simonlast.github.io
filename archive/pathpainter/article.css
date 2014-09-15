@@ -1,0 +1,12 @@
+.images > * {
+	display: inline;
+	max-height: 240px;
+}
+
+p, .links a {
+	font-size: 1.2em;
+}
+
+.links a:hover {
+	text-decoration: underline;
+}
