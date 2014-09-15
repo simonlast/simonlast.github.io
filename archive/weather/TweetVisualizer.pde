@@ -1,5 +1,5 @@
 
-/* @pjs pauseOnBlur="true"; globalKeyEvents="true" preload="assets/us.png,/data/file.txt"; */
+/* @pjs pauseOnBlur="true"; globalKeyEvents="true" preload="assets/us.png,data/file.txt"; */
 //Tweet Visualizer
 //const
 
@@ -128,8 +128,7 @@ void mousePressed(){
 
 public void loadTweets(){
    tweets = new ArrayList<Tweet>();
-//String[] file = loadStrings("http://simonlast.org/data/file.txt");
- String[] file = loadStrings("/data/file.txt");
+ String[] file = loadStrings("data/file.txt");
  boolean first = true;
  for(String s : file){
 
