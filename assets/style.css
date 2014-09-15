@@ -19,7 +19,7 @@ a {
 }
 
 .header, .main, .footer {
-	padding-left: 32px;
+	padding-left: 48px;
 }
 
 .header {
@@ -37,12 +37,12 @@ a {
 
 .main {
 	position: relative;
-	margin-top: 160px;
+	margin-top: 150px;
 	padding-top: 48px;
 	padding-bottom: 48px;
 
 	background-color: rgb(253,253,253);
-	box-shadow: 0 0px 12px rgba(0,0,0,0.2);
+	box-shadow: 0 0px 12px rgba(0,0,0,0.3);
 }
 
 .main > *{
