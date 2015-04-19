@@ -66,13 +66,12 @@ a {
 
 .item .title {
 	padding-bottom: 0.2em;
-
 	font-size: 1.4em;
 }
 
 .item .description {
 	font-size: 1.1em;
-	color: #979797;
+	color: #A6A6A6;
 }
 
 .item:hover .title {
