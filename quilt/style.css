@@ -1,0 +1,19 @@
+
+body {
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	margin: 0;
+}
+
+#canvas {
+	align-self: center;
+	display: flex;
+	width: 100%;
+}
+
+canvas {
+	margin: 0 auto;
+	align-self: center;
+}

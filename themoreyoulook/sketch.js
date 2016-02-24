@@ -13,6 +13,7 @@ var sketch = function(p) {
 
 	p.setup = function() {
 		p.createCanvas(width, height)
+		p.smooth()
 
 		shapeLength  = 50
 		k            = 0.0001
