@@ -12,6 +12,8 @@ var sketch = function(p) {
 	var currentStep  = 0
 	var stepAmount   = 0.002
 
+	var color = [232,74,95]
+
 	p.setup = function() {
 		p.createCanvas(width, height)
 		p.smooth()
@@ -46,7 +48,7 @@ var sketch = function(p) {
 					var averageDist        = (pos.dist(rightPointPos) + pos.dist(belowRightPointPos) + pos.dist(belowPointPos)) / 3
 					var opacity            = (averageDist - 25.0) / (40.0 - 25.0)
 
-					p.fill(p.color(96 * opacity, 201 * opacity, 191 * opacity, 210))
+					p.fill(p.color(color[0] * opacity, color[1] * opacity, color[2] * opacity, 210))
 					p.quad(
 						pos.x, pos.y,
 						rightPointPos.x, rightPointPos.y,
