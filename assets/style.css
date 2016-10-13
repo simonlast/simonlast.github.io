@@ -7,12 +7,6 @@ body {
 	color: rgb(80,80,80);
 }
 
-@media(max-width:60em){
-	body {
-		font-size: 120%;
-	}
-}
-
 * {
 	box-sizing: border-box;
 }
@@ -52,7 +46,7 @@ a {
 }
 
 .archive {
-	margin: 80px;
+	margin: 2em;
 }
 
 .item {
