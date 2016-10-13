@@ -1,6 +1,16 @@
+html {
+	font-size: 1.5em;
+}
+
 body {
 	margin: 0;
 	color: rgb(80,80,80);
+}
+
+@media(max-width:60em){
+	body {
+		font-size: 120%;
+	}
 }
 
 * {
@@ -27,9 +37,9 @@ a {
 }
 
 .about {
-	max-width: 700px;
+	max-width: 29em;
 	margin: 50px auto;
-	font-size: 1.5em;
+	font-size: 100%;
 }
 
 .about > p {
@@ -56,11 +66,11 @@ a {
 
 .item .title {
 	padding-bottom: 0.1em;
-	font-size: 1.5em;
+	font-size: 100%;
 }
 
 .item .description {
-	font-size: 1.2em;
+	font-size: 80%;
 	color: #A6A6A6;
 }
 
