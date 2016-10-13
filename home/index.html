@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+		<title>Simon Last</title>
+		<link rel="shortcut icon" href="http://www.gravatar.com/avatar/3b964d84fcfbcdf59089c8bd7309f0b7.ico" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="//use.typekit.net/suk0ird.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<script src="/assets/analytics.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="content">
+			<p>
+				Hi, I'm Simon. I'm an engineer and designer based in San Francisco.
+			</p>
+			<p>
+				I spend my days working on a product called <a href="https://www.notion.so/">Notion</a>.
+				It looks like a document editor, but secretly it's actually a new kind of programming language.
+			</p>
+			<p>
+				Sometimes I <a href="http://photos.simonlast.org/">take photos</a> and post them online.
+			</p>
+
+			<h1>Sketches</h1>
+			<div class="paintings">
+					<a href="/quilt"><img src="quilt.png"/></a>
+					<a href="/themoreyoulook"><img src="themoreyoulook.png"/></a>
+			</div>
+
+			<h1>Projects</h1>
+			<div class="item">
+				<p>
+					<a href="http://simonlast.org/storybook/">Storybook</a> is a visual programming
+					environment for creating interactive stories.
+				</p>
+				<a href="http://simonlast.org/storybook/"><img src="storybook2.png" /></a>
+			</div>
+			<div class="item">
+				<p>
+					<a href="http://simonlast.org/logicbot/">LogicBot</a> is a tool for creating
+					an interactive creature using logical circuits
+				</p>
+				<a href="http://simonlast.org/logicbot/"><img src="logicbot2.png" /></a>
+			</div>
+			<div class="item">
+				<p>
+					<a href="http://playcreator.simonlast.org/">Playcreator</a> is A visually-oriented
+					programming language for creating animated plays.
+				</p>
+				<a href="http://playcreator.simonlast.org/"><img src="playcreator2.png" /></a>
+			</div>
+			<div class="item">
+				<p>
+					<a href="http://simonlast.org/billy/">Billy</a> is A visually-oriented
+					programming language for manipulating graphical objects.
+				</p>
+				<a href="http://simonlast.org/billy/"><img src="billy2.png" /></a>
+			</div>
+			<div class="item">
+
+			<p>
+				<a href="/archive/">Archive</a>
+			</p>
+
+			<p>
+				Send me an email at <a class="email" data-email="uryyb@fvzbaynfg.bet" onclick="convert(this)" onmouseover="convert(this)" href="/email">uryyb@fvzbaynfg.bet</a>
+			</p>
+			<p>
+				<a href="https://twitter.com/simonlast">@simonlast</a>
+			</p>
+		</div>
+
+		<script type="text/javascript">
+			var az = "abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+			var convert = function(el){
+				var converted = dcpt(el.getAttribute("data-email"));
+				el.href = "mailto:" + converted;
+				el.innerHTML = converted;
+			};
+
+			var dcpt = function(text) {
+				for (var r = "", i = 0; i < text.length; i++) {
+					var chr = text.charAt(i);
+					var position = az.indexOf(chr);
+					if (position > -1) {
+						chr = az.charAt(position + 13);
+					}
+					r += chr;
+				}
+				return r;
+			};
+		</script>
+	</body>
+</html>

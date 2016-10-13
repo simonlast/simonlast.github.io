@@ -28,7 +28,7 @@ var sketch = function(p) {
 	}
 
 	p.draw = function() {
-		p.background(255, 255, 255)
+		p.clear()
 
 		p.strokeWeight(2)
 		p.stroke(60,60,60)

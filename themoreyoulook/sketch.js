@@ -3,8 +3,8 @@ var sketch = function(p) {
 	// Constants.
 	var shapeLength, k, c, friction, rotateRadius, stepDiff, background
 
-	var width  = 600
-	var height = 600
+	var width  = 1440
+	var height = 2560
 	var TAU    = Math.PI * 2
 
 	// Variables.
@@ -15,14 +15,14 @@ var sketch = function(p) {
 		p.createCanvas(width, height)
 		p.smooth()
 
-		shapeLength  = 50
-		k            = 0.0001
-		c            = 9000.00000
+		shapeLength  = 90
+		k            = 0.00002
+		c            = 40000.00000
 		friction     = 0.5
 		rotateRadius = 4.0
 		stepDiff     = 0.003
 
-		shapes = _.map(_.range(150), function(index) {
+		shapes = _.map(_.range(300), function(index) {
 			var p1  = p.createVector(_.random(0, width, true), _.random(0, height, true))
 			var p2  = p5.Vector.random2D().mult(shapeLength + _.random(-8,8)).add(p1)
 			var pAv = p5.Vector.add(p1, p2).div(2)
@@ -38,7 +38,7 @@ var sketch = function(p) {
 			})
 		})
 		p.stroke(222, 66, 66)
-		p.strokeWeight(14)
+		p.strokeWeight(28)
 		p.strokeCap(p.ROUND)
 		background = function() {
 			p.background(255, 225, 101)
