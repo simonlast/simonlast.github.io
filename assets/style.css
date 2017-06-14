@@ -1,14 +1,35 @@
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-moz-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
 html {
 	font-size: 1.5em;
 }
 
 body {
-	margin: 0;
-	color: rgb(80,80,80);
+	margin: 42px;
+	color: rgb(80, 80, 80);
 }
 
 * {
@@ -21,19 +42,28 @@ a {
 }
 
 #instafeed {
+	margin: 0 auto;
+	display: -webkit-flex;
 	display: flex;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	overflow: scroll;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-flow: wrap;
+	flex-flow: wrap;
+	-webkit-align-content: stretch;
+	align-content: stretch;
+	padding: 12px;
 }
 
 #instafeed > * {
+	margin: 12px;
 }
 
 #instafeed img {
-	width: 300px;
+	width: 400px;
 
-	opacity:0;
+	opacity: 0;
 	-webkit-animation: fadeIn ease-in 1;
 	-moz-animation: fadeIn ease-in 1;
 	animation: fadeIn ease-in 1;
@@ -49,13 +79,8 @@ a {
 
 .about {
 	max-width: 29em;
-	margin: 50px auto;
 	font-size: 100%;
-}
-
-.about > p {
-	margin-left: 50px;
-	margin-right: 50px;
+	margin: 72px auto 96px auto;
 }
 
 .about a {
