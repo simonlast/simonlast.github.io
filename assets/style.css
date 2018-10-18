@@ -43,8 +43,10 @@ a {
 
 #instafeed {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	grid-auto-rows: 1fr;
+	gap: 2px;
+	overflow: hidden;
 }
 
 #instafeed::before {
@@ -58,10 +60,6 @@ a {
 #instafeed > *:first-child {
 	grid-row: 1 / 1;
 	grid-column: 1 / 1;
-}
-
-#instafeed > * {
-	border: 1px white solid;
 }
 
 #instafeed img {
